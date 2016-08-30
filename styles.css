@@ -1,11 +1,10 @@
-.w3-panel {
-    max-width: 960px;
-    min-height: 30px;
-    margin: 5px auto; }
+body{
+    background:rebeccapurple;
+}
 
-h1 {
-    text-align: center;
-    color: #673ab7; }
-body {
-    background-color: powderblue;
+.w3-container{
+    max-width:960px;
+    margin:10px auto;
+    background:ivory;
+    padding: 15px;
 }
