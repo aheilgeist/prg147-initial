@@ -2,51 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math in JavaScript</title>
+    <title>Intro to JavaScript</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="w3-container">
-    <script type="text/javascript">
-        var answer = 0;
-        document.write("<h1>JavaScript Math</h1>");
-        answer = 13 + 2;
-        document.write("<br/>13+2 = " + answer);
-        answer = 42 + 2;
-        document.write("<br/>42+2 = " + answer);
-        answer = 25 - 8;
-        document.write("<br/>25-8 =" + answer);
-        answer = 79 - 8;
-        document.write("<br/>79-8 =" + answer);
-        answer = 4 * 3;
-        document.write("<br/>4*3 =" + answer);
-        answer = 29 * 2;
-        document.write("<br/>29*2 =" + answer);
-        answer = 85 / 4;
-        document.write("<br/>85/4 =" + answer);
-        answer = 6 / 1.5;
-        document.write("<br/>6/1.5 =" + answer);
-        answer = 100 % 15;
-        document.write("<br/>100%15 =" + answer);
-        answer = 50 % 25;
-        document.write("<br/>50%25 =" + answer);
-        answer = 2;
-        document.write("<br/>answer =" + answer);
-        document.write("<br/>answer ++ =" + answer++);
-        answer++;
-        document.write("<br/>answer now = " + answer);
-        answer--;
-        document.write("<br/>answer now = " + answer);
-        answer = 5;
-        document.write("<br/>answer =" + answer);
-        document.write("<br/>answer ++ =" + answer++);
-        answer++;
-        document.write("<br/>answer now = " + answer);
-        answer--;
-        document.write("<br/>answer now = " + answer);
-    </script>
+
+<header class="w3-panel" id="head">
+    <h1>Intro to Javascript</h1>
+
+</header>
+
+<div class="w3-panel w3-deep-purple" id="one">
+    <h2>One</h2>
+    <!--The code in this section changes the display style for two div's - visible display = block
+    invisible display = none-->
+    <button type="button" class="w3-btn-floating w3-blue" onclick="document.getElementById('one').style.display='none';
+    document.getElementById('one-open').style.display='block';">-
+    </button>
 </div>
+<div class="w3-panel">
+    <!--The code in this section changes the visibility of both this and the above panels-->
+    <button type="button" id="one-open" class="w3-btn-floating w3-teal" style="display:none;"
+            onclick="document.getElementById('one').style.display='block'">+
+    </button>
+
+</div>
+<div class="w3-panel w3-red" id="two">
+    <h2>What time is it?</h2>
+    <!--The code here calls for the system date and time and displays them in the paragraph with the time ID -->
+    <button type="button" class="w3-btn w3-deep-purple"
+            onclick="document.getElementById('time').innerHTML=Date()">
+        Click Here
+    </button>
+
+    <p id="time"></p>
+
+</div>
+<div class="w3-panel w3-amber" id="three">
+    <h2>Motivational Quote</h2>
+    <button type="button" class="w3-btn w3-deep-purple"
+            onclick="document.getElementById('greet').innerHTML = 'Mistakes are proof that you are trying'">
+        Today's Quote
+    </button>
+
+    <p id="greet"></p>
+</div>
+<div class="w3-panel w3-orange" id="four">
+     <h2>Change Div Color</h2>
+    <!--The code here changes the background color of the div -->
+<button type="button" onclick="myFunction()">Change Div color</button>
+
+<script>
+    function myFunction() {
+        color: deep-purple;
+    }
+</script>
+    <p id="color"></p>
+    </div>
+<a href="http://www.aheilgeist.mccdgm.net/">Take me to Index Page</a>
 </body>
 </html>
