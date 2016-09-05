@@ -1,66 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Intro to JavaScript</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Events</title>
+
+    <script>
+        alert("Welcome and thanks for stopping by");
+    </script>
+    <!-- Link to Google Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Coiny" rel="stylesheet">
     <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
-
-<header class="w3-panel" id="head">
-    <h1>Intro to Javascript</h1>
-
-</header>
-
-<div class="w3-panel w3-deep-purple" id="one">
-    <h2>One</h2>
-    <!--The code in this section changes the display style for two div's - visible display = block
-    invisible display = none-->
-    <button type="button" class="w3-btn-floating w3-blue" onclick="document.getElementById('one').style.display='none';
-    document.getElementById('one-open').style.display='block';">-
-    </button>
-</div>
-<div class="w3-panel">
-    <!--The code in this section changes the visibility of both this and the above panels-->
-    <button type="button" id="one-open" class="w3-btn-floating w3-teal" style="display:none;"
-            onclick="document.getElementById('one').style.display='block'">+
-    </button>
-
-</div>
-<div class="w3-panel w3-red" id="two">
-    <h2>What time is it?</h2>
-    <!--The code here calls for the system date and time and displays them in the paragraph with the time ID -->
-    <button type="button" class="w3-btn w3-deep-purple"
-            onclick="document.getElementById('time').innerHTML=Date()">
-        Click Here
-    </button>
-
-    <p id="time"></p>
-
-</div>
-<div class="w3-panel w3-amber" id="three">
-    <h2>Motivational Quote</h2>
-    <button type="button" class="w3-btn w3-deep-purple"
-            onclick="document.getElementById('greet').innerHTML = 'Mistakes are proof that you are trying'">
-        Today's Quote
-    </button>
-
-    <p id="greet"></p>
-</div>
-<div class="w3-panel w3-orange" id="four">
-     <h2>Change Div Color</h2>
-    <!--The code here changes the background color of the div -->
-<button type="button" onclick="myFunction()">Change Div color</button>
-
-<script>
-    function myFunction() {
-        color: deep-purple;
-    }
-</script>
-    <p id="color"></p>
+<div class="container">
+<main>
+    <div class="col-1 col-m-12">
     </div>
-<a href="http://www.aheilgeist.mccdgm.net/">Take me to Index Page</a>
+
+
+<h1>Basics</h1>
+
+    <div class="container">
+
+        <div class="col-12 col-m-12">
+
+            <h2>Change Background from a Color to an Image</h2>
+
+            <p>&nbsp;</p>
+
+            <button class="w3-btn w3-text-shadow w3-xlarge w3-aqua" onclick="chgBackground()">Change Background</button>
+
+            <p>&nbsp;</p>
+
+        </div>
+
+    </div>
+
+    <div class="container">
+
+        <div class="col-12 col-m-12"></div>
+        <div class="col-12 col-m-12">
+<h2>Click the button to display the date and time.</h2>
+
+<<button class="w3-btn w3-text-shadow w3-xlarge w3-purple" onclick="myDate()">Click me</button>
+<p id="demo"></p>
+<p>&nbsp;</p>
+            </div>
+        </div>
+
+    <div class="container">
+
+        <div class="col-12 col-m-12"></div>
+        <div class="col-12 col-m-12">
+<h2>Hover over the image, then move your mouse off of it</h2>
+<img src="images/tombydam.jpg" alt="Tom by dam"
+                 id="tom"
+     width="300" onmouseover="swap1()" onmouseout="swap2()" >
+</div>
+        </div>
+
+    <div class="container">
+
+        <div class="col-12 col-m-12"></div>
+        <div class="col-12 col-m-12">
+
+        <h2>Show Text by Clicking a Button</h2>
+
+        <button class="w3-btn w3-text-shadow w3-xlarge w3-purple" onclick="clickAnswer()">Click me</button>
+
+        <p id="click"></p>
+
+        <p>&nbsp;</p>
+        <div class="col-1 col-m-12">
+        </div>
+        </div>
+        </div>
+
+
+
+    <div class="container">
+
+        <div class="col-12 col-m-12">
+        </div>
+        <div class="col-12 col-m-12">
+
+            <h2>Change Text by Hovering with Mouse</h2>
+
+            <p style="text-align: center;">Hover over box with mouse, then move off to see the text change.</p>
+
+            <p>&nbsp;</p>
+
+            <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:#1c5dd9; width:200px; height:50px; padding:10px; font-weight:700; font-size:2em;">Hello</div>
+        </div>
+    </div>
+
+        <div class="container ">
+
+            <div class="col-1 col-m-12 ">
+            </div>
+
+            <div class="col-10 col-m-12 ">
+
+                <h2 id="head2">Change Text Color by Clicking a Button</h2>
+                <p>&nbsp;</p>
+
+                <button class="w3-btn w3-text-shadow w3-xlarge w3-purple" onclick="changeTextColor() ">Change headline text color</button>
+
+                <p>&nbsp;</p>
+
+            </div>
+
+            <div class="col-1 col-m-12 ">
+            </div>
+            </div>
+
+            <div class="container ">
+
+                <div class="col-1 col-m-12 ">
+                </div>
+
+                <div class="col-10 col-m-12 ">
+
+                    <h2>An Event Caused by Pressing a Key</h2>
+
+                    <p>&nbsp;</p>
+
+                    <p>Click inside the box and press any key.</p>
+
+                    <p>&nbsp;</p>
+
+                    <input type="text" onkeydown="pressKey()">
+
+                    <p>&nbsp;</p>
+
+                    <p id="pKey"></p>
+
+                    <p>&nbsp;</p>
+
+                </div>
+
+                <div class="col-1 col-m-12 ">
+                </div>
+
+            </div>
+
+    <div class="container ">
+
+        <div class="col-1 col-m-12 ">
+        </div>
+
+        <div class="col-10 col-m-12 ">
+
+            <h2>An Event Triggered by Double Clicking on an Object or Text</h2>
+
+            <p>&nbsp;</p>
+
+            <p ondblclick="dblclick()">Double-click HERE.</p>
+
+            <p>&nbsp;</p>
+
+            <p id="dblclick"></p>
+
+            <p>&nbsp;</p>
+
+        </div>
+
+        <div class="col-1 col-m-12 ">
+        </div>
+
+    </div>
+
+
+    <div class="container ">
+
+        <div class="col-1 col-m-12 ">
+        </div>
+
+        <div class="col-10 col-m-12 ">
+
+            <h2>Change Things with Right-Click</h2>
+
+            <p>&nbsp;</p>
+
+            <div oncontextmenu="rightClick(this)" onmouseup="mUp(this)" style="background-color:#cd38d9; width:300px; height:30px; padding:40px; font-weight:600; font-size:1.5em; font-family:'Coiny';">Right-Click Me</div>
+
+            <p>&nbsp;</p>
+
+        </div>
+
+        <div class="col-1 col-m-12 ">
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script>
+    function myDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+    function swap1(){
+        document.getElementById("tom").src="images/tombydam.jpg";
+    }
+    function swap2(){
+        document.getElementById("tom").src="images/tomsleeping.jpg";
+    }
+    function clickAnswer() {
+        document.getElementById("click").innerHTML = "Pretty cool!";
+    }
+    function mOver(obj) {
+        obj.innerHTML = "Hello";
+    }
+    function mOut(obj) {
+        obj.innerHTML = "Goodbye";
+    }
+    function changeTextColor() {
+        document.getElementById("head2").style.color = "#50044D";
+    }
+    function pressKey() {
+        document.getElementById("pKey").innerHTML = "Mission Accomplished!";
+    }
+    function dblclick() {
+        document.getElementById("dblclick").innerHTML = "Good Job!";
+    }
+    function chgBackground() {
+        document.body.style.backgroundImage = "url('images/Swirls-Background.jpg')";
+    }
+    function rightClick(obj) {
+        obj.style.backgroundColor = "#eaf04e";
+        obj.innerHTML = "Well Done!";
+    }
+
+
+    </script>
+
+
+
+</main>
+</div>
 </body>
+
+
 </html>
